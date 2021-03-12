@@ -32,11 +32,10 @@ app.get('/notes', (req, res) => res.sendFile(path.join(__dirname, './public/note
 
 app.get('/api/notes', (req, res) => res.json(db));
 
-// get previous notes data display to page
-
-// post/get blank note when they push "new-note" button
 
 // post save notes when they push "save-note" button
+
+// app.post()
 
 // delete note from database when they push "trash can" button
 
