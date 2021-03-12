@@ -33,11 +33,19 @@ app.get('/notes', (req, res) => res.sendFile(path.join(__dirname, './public/note
 app.get('/api/notes', (req, res) => res.json(db));
 
 
-// post save notes when they push "save-note" button
+// POST request to save new notes to db.json array
 
-// app.post()
+app.post('/api/notes', (req, res) => {
+    const newNote = req.body;
+    // const noteDb = 
 
-// delete note from database when they push "trash can" button
+
+
+    console.log(newNote);
+    res.json(newNote);
+})
+
+// DELETE request to remove notes from db.json array
 
 
 
