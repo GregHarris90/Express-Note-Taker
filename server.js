@@ -4,6 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const db = require('./db/db.json');
 
+console.log('Show:', db);
 // Store express app
 const app = express();
 
@@ -21,9 +22,7 @@ app.use(express.static('public'));
 
 // HTML GET requests
 
-app.get('/', (req, res) => res.sendFile(path.join(__dirname, './public/index.html')));
 
-app.get('/notes', (req, res) => res.sendFile(path.join(__dirname, './public/notes.html')));
 
 // API GET request
 
@@ -35,7 +34,7 @@ app.post('/api/notes', (req, res) => {
     // stores user's note in newNote object
     const newNote = req.body;
     // reads data from db.json, parses it and stores json object in currentNotes
-    const currentNotes = JSON.parse(fs.readFileSync('./db/db.json', 'utf8'));
+    const currentNotes = JSON.parse(fs.readFileSync(path.join(__dirname, './db/db.json'), 'utf8'));
 
     // push newNote object into currentNotes array
     currentNotes.push(newNote);
@@ -44,7 +43,7 @@ app.post('/api/notes', (req, res) => {
     const newNotes = JSON.stringify(currentNotes);
 
     // write json string to the db.json file
-    fs.writeFileSync('./db/db.json', newNotes);
+    fs.writeFileSync(path.join(__dirname, './db/db.json'), newNotes);
 
 
     // log newNote, currentNotes, newNotes
@@ -56,6 +55,10 @@ app.post('/api/notes', (req, res) => {
     res.json(newNote);
     
 });
+
+app.get('/', (req, res) => res.sendFile(path.join(__dirname, './public/index.html')));
+
+app.get('/notes', (req, res) => res.sendFile(path.join(__dirname, './public/notes.html')));
 
 // DELETE request to remove notes from db.json array
 
