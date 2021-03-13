@@ -37,17 +37,17 @@ app.get('/api/notes', (req, res) => res.json(db));
 
 app.post('/api/notes', (req, res) => {
     const newNote = req.body;
-    // const noteDb = 
+    const obj = fs.readFileSync('./db/db.json', 'utf8');
 
 
-
-    console.log(newNote);
+    console.log(obj);
+    // console.log(newNote);
     res.json(newNote);
 })
 
 // DELETE request to remove notes from db.json array
 
-
+// app.delete('api/notes',)
 
 
 
