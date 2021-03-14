@@ -45,7 +45,6 @@ app.post('/api/notes', (req, res) => {
     // write json string to the db.json file
     fs.writeFileSync(path.join(__dirname, './db/db.json'), newNotes);
 
-
     // log newNote, currentNotes, newNotes
     console.log('new Note:', addNote);
     console.log('current Notes:', currentNotes);
@@ -55,7 +54,6 @@ app.post('/api/notes', (req, res) => {
     res.json(addNote);
     
 });
-
 
 // DELETE request to remove notes from db.json array
 
