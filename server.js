@@ -2,9 +2,7 @@
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
-const db = require('./db/db.json');
 
-console.log('Show:', db);
 // Store express app
 const app = express();
 
@@ -18,26 +16,28 @@ app.use(express.json());
 // Setup express.static to serve us our 'public' folder (css/js)
 app.use(express.static('public'));
 
-// Setup Routes
+// HTML/API Routes
 
 // HTML GET requests
 
+app.get('/', (req, res) => res.sendFile(path.join(__dirname, './public/index.html')));
 
+app.get('/notes', (req, res) => res.sendFile(path.join(__dirname, './public/notes.html')));
 
 // API GET request
 
-app.get('/api/notes', (req, res) => res.json(db));
+app.get('/api/notes', (req, res) => res.json(JSON.parse(fs.readFileSync(path.join(__dirname, './db/db.json'), 'utf8'))));
 
 // POST request to save new notes to db.json array
 
 app.post('/api/notes', (req, res) => {
     // stores user's note in newNote object
-    const newNote = req.body;
+    const addNote = req.body;
     // reads data from db.json, parses it and stores json object in currentNotes
     const currentNotes = JSON.parse(fs.readFileSync(path.join(__dirname, './db/db.json'), 'utf8'));
 
     // push newNote object into currentNotes array
-    currentNotes.push(newNote);
+    currentNotes.push(addNote);
 
     // make currentNotes object back into json string
     const newNotes = JSON.stringify(currentNotes);
@@ -47,18 +47,15 @@ app.post('/api/notes', (req, res) => {
 
 
     // log newNote, currentNotes, newNotes
-    console.log('new Note:', newNote);
+    console.log('new Note:', addNote);
     console.log('current Notes:', currentNotes);
     console.log('new Notes Array:', newNotes);
 
     // responds with json newNote
-    res.json(newNote);
+    res.json(addNote);
     
 });
 
-app.get('/', (req, res) => res.sendFile(path.join(__dirname, './public/index.html')));
-
-app.get('/notes', (req, res) => res.sendFile(path.join(__dirname, './public/notes.html')));
 
 // DELETE request to remove notes from db.json array
 
