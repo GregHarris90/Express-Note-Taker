@@ -26,7 +26,9 @@ https://guarded-journey-63441.herokuapp.com/
 
 # User-Story
 
-- First the user is presented with a main page for the Note Taker application. To begin simply press the "get started" button.
+- The user is presented with a main page for the Note Taker application. 
+
+- For the user to begin simply press the "get started" button.
 
 - Then the user is taken to another page where we can write, save, edit, and delete various notes.
 
