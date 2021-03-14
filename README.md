@@ -1,5 +1,5 @@
 # Express-Note-Taker
-This is an application to save and delete notes input by the user.
+This is an application to save, edit, and delete notes input by the user.
 
 *Homework assignment for Week 11 of Coding Bootcamp!*
 
@@ -22,13 +22,16 @@ https://guarded-journey-63441.herokuapp.com/
 
 # Technology-Used
 
-- 
+- This project was about building the server side of an application to serve up html files to the user on the webpage. We setup routes for both the html and the apis, then using express we are able to make GET, POST, and DELETE requests to write, save, and remove notes. 
 
 # User-Story
 
-- 
+- First the user is presented with a main page for the Note Taker application. To begin simply press the "get started" button.
 
-# Team-Profile-Generator
+- Then the user is taken to another page where we can write, save, edit, and delete various notes.
+
+
+# Note-Taker-Application
 
 ### Terminal-Application
 
@@ -54,4 +57,4 @@ https://guarded-journey-63441.herokuapp.com/
 
 # Conclusion
 
-- 
+- This assignment has been a challenge. I tried to do a bunch of a review to better prepare for tackling this project. And while I feel confident in understanding these concepts I still ran into various walls when trying to get this application to work. I was eventually able to get my notes to save but haven't finished writing the delete method. I'm going to continue working on this in hopes to finish it for my portfolio. 
