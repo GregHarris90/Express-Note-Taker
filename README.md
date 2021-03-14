@@ -51,6 +51,18 @@ https://guarded-journey-63441.herokuapp.com/
 
 ![NT-Notes-Page](https://user-images.githubusercontent.com/73864182/110914925-e19bfb00-82cb-11eb-8a92-b85906724894.png)
 
+*Input-Note then save*
+
+![NT-Notes-Page1](https://user-images.githubusercontent.com/73864182/111058354-ecc56700-8442-11eb-95dc-ac3ed5241f1e.png)
+
+*Saved-Note is added to sidebar*
+
+![NT-Notes-Page2](https://user-images.githubusercontent.com/73864182/111058353-ecc56700-8442-11eb-8c11-e745ac2aabdf.png)
+
+*Plans for Future-Development*
+
+![NT-Future-Development](https://user-images.githubusercontent.com/73864182/111058351-ec2cd080-8442-11eb-89b8-fc4bf788720f.png)
+
 
 # Contact-Info:
 
