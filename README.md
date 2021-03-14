@@ -8,7 +8,7 @@ This is an application to save, edit, and delete notes input by the user.
 * [Repository](#Repository) 
 * [Technology Used](#Technology-Used) 
 * [User Story](#User-Story)
-* [Terminal Application](#Terminal-Application)
+* [Webpage Application](#Webpage-Application)
 * [Contact Info](#Contact-Info)
 * [Conclusion](#Conclusion)
 
@@ -35,7 +35,7 @@ https://guarded-journey-63441.herokuapp.com/
 
 # Note-Taker-Application
 
-### Terminal-Application
+### Webpage-Application
 
 *IMAGES BELOW*
 
