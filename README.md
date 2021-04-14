@@ -67,7 +67,7 @@ https://guarded-journey-63441.herokuapp.com/
 # Contact-Info:
 
 - Name: Greg Harris
-- Email: ghart.productions@gmail.com
+- Email: ghcoder90@gmail.com
 
 # Conclusion
 
